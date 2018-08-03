@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>PrayerBook</title>
+        	<style>
+        		body {
+        			background-color: #afafaf;
+        			color: #afafaf;
+        			font-family: sans-serif;
+        			font-size: 25px;
+        		}
+        		div {
+        			border-radius: 30px;
+        			background-color: white;
+        			height: 90vh;
+        		}
+        		button {
+        			border-radius: 30px;
+        			background-color: #afafaf;
+        			border: none;
+        			color: white;
+        			font-family: sans-serif;
+        			font-size: 35px;
+        			width: 75vw;
+        			margin-top: 10px;
+        		}
+        		input {
+        			width: 73vw;
+        			border-radius: 30px;
+        			text-align: center;
+        			border: 7px solid #afafaf;
+        			color: #808080;
+        			font-family: sans-serif;
+        			font-size: 25px;
+        		}
+    		</style>
+    </head>
+    <body>
+    	<center>
+    		<div>
+    		<h1 style="height: 300px;" ><br><br>My<br>Little<br>Prayerbook</h1>
+    		<input id="prayername" ><br>
+    		<button onclick="findprayers()" >Find Prayer</button>
+    	    </div>
+        </center>
+        <script>
+        	var findprayer = 0;
+        	setInterval(loop, 1000/60);
+        	function findprayers() {
+        		findprayer = document.getElementById("prayername").value.toLowerCase();
+        	}
+        	function loop() {
+        	if (findprayer == "night" || findprayer == "nighttime" || findprayer == "bedtime" || findprayer == "evening") {
+        		window.open ('night.html','_self',false);
+        		findprayer = 0;
+        	}
+        	if (findprayer == "morning" ||findprayer == "daybreak" || findprayer == "morn") {
+        		window.open ('morn.html','_self',false);
+        		findprayer = 0;
+        	}
+        	if (findprayer == "midday" || findprayer == "day" || findprayer == "daytime" || findprayer == "12") {
+        		window.open ('midday.html','_self',false);
+        		findprayer = 0;
+        	}
+
+
+        	if (findprayer == "work" || findprayer == "workplace" || findprayer == "at work") {
+        		window.open ('work.html','_self',false);
+        		findprayer = 0;
+        	}
+        	if (findprayer == "home" || findprayer == "house" || findprayer == "at home") {
+        		window.open ('home.html','_self',false);
+        		findprayer = 0;
+        	}
+        	if (findprayer == "family" || findprayer == "my family" || findprayer == "fam") {
+        		window.open ('family.html','_self',false);
+        		findprayer = 0;
+        	}
+        }
+        </script>
+    </body>
+</html>
